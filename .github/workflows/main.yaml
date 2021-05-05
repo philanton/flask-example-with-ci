@@ -3,11 +3,12 @@ on: [push]
 
 jobs:
   test:
-    fail-fast: false
-    matrix:
-      python-version: [3.9]
-      poetry-version: [1.1.6]
-      os: [ubuntu-latest]
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.9]
+        poetry-version: [1.1.6]
+        os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -19,11 +20,12 @@ jobs:
       - name: Run tests
         run: poetry run pytest
   code-quality:
-    fail-fast: false
-    matrix:
-      python-version: [3.9]
-      poetry-version: [1.1.6]
-      os: [ubuntu-latest]
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.9]
+        poetry-version: [1.1.6]
+        os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
