@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "flask-example"
+version = "0.1.0"
+description = ""
+authors = ["philanton <jellyskate1999@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.9.1"
+black = "^21.5b0"
+isort = "^5.8.0"
+safety = "^1.10.3"
+bandit = "^1.7.0"
+pre-commit = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
